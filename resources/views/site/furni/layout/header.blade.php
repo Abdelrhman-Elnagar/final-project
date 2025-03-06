@@ -12,7 +12,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Untree.co">
-    <link rel="shortcut icon" href="favicon.png')}}">
+    <link rel="shortcut icon" href="{{asset('site/furni/images/favicon.png')}}">
 
     <meta name="description" content="" />
     <meta name="keywords" content="bootstrap, bootstrap4" />
@@ -41,13 +41,13 @@
             <div class="collapse navbar-collapse" id="navbarsFurni">
                 <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="{{ route('furni.index') }}">Home</a>
                     </li>
-                    <li><a class="nav-link" href="shop.html">Shop</a></li>
-                    <li><a class="nav-link" href="about.html">About us</a></li>
-                    <li><a class="nav-link" href="services.html">Services</a></li>
-                    <li><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li><a class="nav-link" href="contact.html">Contact us</a></li>
+                    <li><a class="nav-link" href="{{ route('furni.shop') }}">Shop</a></li>
+                    <li><a class="nav-link" href="{{ route('furni.about') }}">About us</a></li>
+                    <li><a class="nav-link" href="{{ route('furni.services') }}">Services</a></li>
+                    <li><a class="nav-link" href="{{ route('furni.blog') }}">Blog</a></li>
+                    <li><a class="nav-link" href="{{ route('furni.contact') }}">Contact us</a></li>
                 </ul>
 
 
@@ -63,10 +63,20 @@
         <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
             @if (Route::has('login'))
                 @auth
-                    {{-- <a href="{{ url('/dashboard') }}" class="nav-link">
+
+                     <a href="{{ route('boss.index') }}" class="nav-link">
                         Dashboard
                     </a>
-                @else --}}
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;padding-right:2px;">
+                        @csrf
+                    </form>
+
+                    <a href="#" class="nav-link"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        Logout
+                    </a>
+                @else
                     <a href="{{ route('login') }}" class="nav-link">
                         Log in
                     </a>
@@ -81,4 +91,4 @@
         </ul>
 
     </nav>
-    <!-- End Header/Navig
+    <!-- End Header/Navigation -->

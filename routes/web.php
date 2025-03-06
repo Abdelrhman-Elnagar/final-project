@@ -23,6 +23,14 @@ Route::middleware('auth')->group(function () {
 
 Route::group(['prefix'=>'furni'],function(){
     Route::get('index',[FurniController::class,'index'])->name('furni.index');
+    Route::get('about',[FurniController::class,'about'])->name('furni.about');
+    Route::get('blog',[FurniController::class, 'blog'])->name('furni.blog');
+    Route::get('cart',[FurniController::class, 'cart'])->name('furni.cart');
+    Route::get('checkout',[FurniController::class, 'checkout'])->name('furni.checkout');
+    Route::get('contact',[FurniController::class, 'contact'])->name('furni.contact');
+    Route::get('services',[FurniController::class, 'services'])->name('furni.services');
+    Route::get('shop',[FurniController::class, 'shop'])->name('furni.shop');
+    Route::get('thankyou',[FurniController::class, 'thankyou'])->name('furni.thankyou');
 });
 
 Route::group(['prefix'=>'boss'],function(){
