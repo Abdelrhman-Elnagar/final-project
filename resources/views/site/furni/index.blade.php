@@ -6,9 +6,9 @@
 					<div class="row justify-content-between">
 						<div class="col-lg-5">
 							<div class="intro-excerpt">
-								<h1>Modern Interior <span clsas="d-block">Design Studio</span></h1>
+								<h1>{{ __('Modern Interior Design Studio') }}</h1>
 								<p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
-								<p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
+								<p><a href="" class="btn btn-secondary me-2">{{ __('Shop Now') }}</a><a href="#" class="btn btn-white-outline">{{ __('Explore') }}</a></p>
 							</div>
 						</div>
 						<div class="col-lg-7">
@@ -28,9 +28,9 @@
 
 					<!-- Start Column 1 -->
 					<div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
-						<h2 class="mb-4 section-title">Crafted with excellent material.</h2>
+						<h2 class="mb-4 section-title">{{ __('Crafted with excellent material.') }}</h2>
 						<p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. </p>
-						<p><a href="{{ route('furni.shop') }}" class="btn">Explore</a></p>
+						<p><a href="{{ route('furni.shop') }}" class="btn">{{ __('Explore') }}</a></p>
 					</div>
 					<!-- End Column 1 -->
 

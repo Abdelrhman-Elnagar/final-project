@@ -27,11 +27,11 @@ class FurniController extends Controller
     }
 
     public function contact(){
-        return view('site.furni.shop');
+        return view('site.furni.contact');
     }
 
     public function services(){
-        return view('site.furni.shop');
+        return view('site.furni.services');
     }
 
     public function shop(){
